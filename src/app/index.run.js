@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('notifications')
+    .module('myApp')
     .run(runBlock);
 
   /** @ngInject */

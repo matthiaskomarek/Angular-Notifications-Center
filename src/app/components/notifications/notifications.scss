@@ -1,0 +1,86 @@
+/**
+* @name
+* @author Matthias Komarek matthias@m-komarek.de
+* @copyright Matthias Komarek 2015
+* @date 06.12.15 20:29
+*/
+
+// Main Colors
+
+$infoColor: #72A3DD;
+$infoBorder: #628CBE;
+
+$warningColor: #F5A623;
+$warningBorder: #D28B17;
+
+$errorColor: #D0021B;
+$errorBorder: #A90116;
+
+$groupColor: #9B9B9B;
+$groupBorder: #7F7E7F;
+
+
+.notification {
+	color: #fff;
+	padding: 5px;
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+
+	.notification-title {
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.notification-message {
+		word-wrap: break-word;
+		font-size: 12px;
+	}
+
+	.notification-close-button {
+		position: relative;
+		right: 5px;
+		top: 0;
+		font-size: 19px;
+		font-weight: bold;
+		color: #fff;
+		float: right;
+		line-height: 1;
+	}
+
+	&.notification-info {
+		background: $infoColor;
+		border: 1px solid $infoBorder;
+	}
+
+	&.notification-warning {
+		background: $warningColor;
+		border: 1px solid $warningBorder;
+	}
+
+	&.notification-error {
+		background: $errorColor;
+		border: 1px solid $errorBorder;
+	}
+}
+.notification-group {
+	color: #fff;
+	padding: 5px;
+	box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+	background: $groupColor;
+	border: 1px solid $groupBorder;
+
+	.notification-group-title {
+		font-weight: bold;
+		font-size: 14px;
+	}
+}
+
+#notifications-container {
+	position: fixed;
+	top: 0;
+	right: 5px;
+	width: 300px;
+
+	& > div {
+		margin-top: 5px;
+	}
+}

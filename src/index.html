@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="notifications">
+<html ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
 		<title>notifications</title>
@@ -26,7 +26,36 @@
 
 		<div class="container" ng-controller="MainController as main">
 
+			<div class="row">
+				<div class="small-12 columns">
+					<h3>Notifications Example Page</h3>
+				</div>
+				<div class="medium-4 columns">
+					<label>Title
+						<input type="text" placeholder="Notification Title" ng-model="main.newNotification.title" />
+					</label>
+				</div>
+				<div class="medium-4 columns">
+					<label>Type
+						<select ng-model="main.newNotification.type">
+							<option value="info">Info</option>
+							<option value="warning">Warning</option>
+							<option value="error">Error</option>
+						</select>
+					</label>
+				</div>
+				<div class="medium-8 columns left">
+					<label>Body
+						<textarea ng-model="main.newNotification.message" placeholder="Notification Body"></textarea>
+					</label>
+				</div>
+				<div class="small-12 columns">
+					<button class="button" ng-click="main.createNotification()">Create</button>
+				</div>
+
+			</div>
 		</div>
+		<div notification-container></div>
 
 
 		<!-- build:js(src) scripts/vendor.js -->

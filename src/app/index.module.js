@@ -2,6 +2,9 @@
   'use strict';
 
   angular
-    .module('notifications', ['ngSanitize', 'toastr']);
+    .module('myApp', [
+	    'ngSanitize',
+	    'mk.notifications'
+    ]);
 
 })();
