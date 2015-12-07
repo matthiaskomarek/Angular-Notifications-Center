@@ -9,5 +9,10 @@
 	'use strict';
 
 	angular
-		.module('mk.notifications', []);
+		.module('mk.notifications', [
+			'ngAnimate',
+			'mk.notifications.services.NotificationCenter',
+			'mk.notifications.directives.Notification',
+			'mk.notifications.directives.NotificationContainer'
+		]);
 })();

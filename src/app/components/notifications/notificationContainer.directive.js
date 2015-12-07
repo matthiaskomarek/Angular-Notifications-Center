@@ -8,7 +8,9 @@
 	'use strict';
 
 	angular
-		.module('mk.notifications')
+		.module('mk.notifications.directives.NotificationContainer', [
+			'mk.notifications.directives.Notification'
+		])
 		.directive('notificationContainer', notificationContainer);
 
 	function notificationContainer() {
@@ -16,7 +18,7 @@
 			bindToController: true,
 			controller: NotificationContainerDirectiveController,
 			controllerAs: 'vm',
-			restrict: 'A',
+			restrict: 'AE',
 			scope: {},
 			template: [
 				'<div id="notifications-container" ng-if="vm.visibleNotifications.length > 0">',

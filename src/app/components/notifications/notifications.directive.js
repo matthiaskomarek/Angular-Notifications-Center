@@ -9,7 +9,9 @@
 	'use strict';
 
 	angular
-		.module('mk.notifications')
+		.module('mk.notifications.directives.Notification', [
+			'mk.notifications.services.NotificationCenter'
+		])
 		.directive('notification', notification);
 
 	notification.$inject = ['NotificationCenter', '$timeout'];
@@ -36,9 +38,12 @@
 		};
 		return directive;
 
-		function link(scope, element, attrs) {
+		function link(scope, element) {
 			var closeTimeout;
 
+			/**
+			 * cancel
+			 */
 			var cancelTimeout = function() {
 				$timeout.cancel(closeTimeout);
 			};

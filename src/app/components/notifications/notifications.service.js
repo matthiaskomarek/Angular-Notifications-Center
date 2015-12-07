@@ -9,7 +9,7 @@
 	'use strict';
 
 	angular
-		.module('mk.notifications')
+		.module('mk.notifications.services.NotificationCenter', [])
 		.constant('NotificationConstants', {
 			TYPE: {
 				INFO: 'notification-info',
@@ -23,10 +23,10 @@
 		})
 		.factory('NotificationCenter', NotificationCenter);
 
-	NotificationCenter.$inject = ['$log', 'NotificationConstants'];
+	NotificationCenter.$inject = ['NotificationConstants'];
 
 	/* @ngInject */
-	function NotificationCenter($log, NotificationConstants) {
+	function NotificationCenter(NotificationConstants) {
 
 		var notifications = [];
 		var groupedNotifications = [];

@@ -84,3 +84,18 @@ $groupBorder: #7F7E7F;
 		margin-top: 5px;
 	}
 }
+
+.notification.ng-move,
+.notification.ng-enter {
+	transition:all linear 0.25s;
+}
+
+.notification.ng-move,
+.notification.ng-enter {
+	opacity:0;
+}
+
+.notification.ng-move.ng-move-active,
+.notification.ng-enter.ng-enter-active {
+	opacity:1;
+}

@@ -1,24 +1,24 @@
 (function() {
-    'use strict';
+	'use strict';
 
-    angular
-        .module('myApp')
-        .controller('MainController', MainController);
+	angular
+		.module('myApp')
+		.controller('MainController', MainController);
 
-    /** @ngInject */
-    function MainController(NotificationCenter) {
-        var vm = this;
+	/** @ngInject */
+	function MainController(NotificationCenter) {
+		var vm = this;
 
-	    vm.newNotification = {
-		    title: 'Test Title',
-		    message: 'Test Message',
-		    type: 'info'
-	    };
+		vm.newNotification = {
+			title: 'Test Title',
+			message: 'Test Message',
+			type: 'info'
+		};
 
-	    NotificationCenter.add('Test title', 'messager wer gwerdwe wwerg wergwer', 'error');
+		NotificationCenter.add('Test title', 'messager wer gwerdwe wwerg wergwer', 'error');
 
-	    vm.createNotification = function() {
-		    NotificationCenter.add(vm.newNotification.title, vm.newNotification.message, vm.newNotification.type);
-	    }
-    }
+		vm.createNotification = function() {
+			NotificationCenter.add(vm.newNotification.title, vm.newNotification.message, vm.newNotification.type);
+		}
+	}
 })();
