@@ -10,15 +10,13 @@
 		var vm = this;
 
 		vm.newNotification = {
-			title: 'Test Title',
-			message: 'Test Message',
-			type: 'info'
+			header: 'Test Title',
+			content: 'Test Message',
+			category: 'info'
 		};
 
-		NotificationCenter.add('Test title', 'messager wer gwerdwe wwerg wergwer', 'error');
-
 		vm.createNotification = function() {
-			NotificationCenter.add(vm.newNotification.title, vm.newNotification.message, vm.newNotification.type);
+			NotificationCenter.add(vm.newNotification);
 		}
 	}
 })();

@@ -1,0 +1,62 @@
+<h1><code ng:non-bindable="">NotificationCenter</code>
+<div><span class="hint">service in module <code ng:non-bindable="">mk.notifications.services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="mk-notifications-services-notificationcenter-page"><p>An angular service to handle the notifications displayed.
+The service can add, remove and group different notifications.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="api/NotificationConstants">NotificationConstants</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_add">add(notification)</h3>
+<div class="add"><div class="add-page"><p>Adds a new notification to the notification list.
+If max amount reached, oldest notifications get grouped.</p>
+</div><h5 id="methods_add_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>notification</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="add-page"><p>the notification to add</p>
+</div></td></tr></tbody></table><h5 id="methods_add_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-void">void</a></td><td><div class="add-page"><p>nothing</p>
+</div></td></tr></table><h4 id="methods_add_example">Example</h4>
+<div class="example"><div class="add-page"><p>{header: &#39;test header&#39;, content: &#39;test content&#39;}</p>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_findnotification">findNotification(notificationId)</h3>
+<div class="findnotification"><div class="findnotification-page"><p>Finds and returns a notification from the visible notification list for id</p>
+</div><h5 id="methods_findnotification_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>notificationId</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="findnotification-page"><p>the id of the notification</p>
+</div></td></tr></tbody></table><h5 id="methods_findnotification_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="findnotification-page"><p>notification</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getclassforcategory">getClassForCategory()</h3>
+<div class="getclassforcategory"><div class="getclassforcategory-page"><p>Returns a css class as string for notification category.
+Defaults to category info if no category is specified</p>
+</div><h5 id="methods_getclassforcategory_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="getclassforcategory-page"><p>css class as string</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getgroupednotifications">getGroupedNotifications()</h3>
+<div class="getgroupednotifications"><div class="getgroupednotifications-page"><p>Returns all grouped notifications as array</p>
+</div><h5 id="methods_getgroupednotifications_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="getgroupednotifications-page"><p>array with notifications as objects</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getvisiblenotifications">getVisibleNotifications()</h3>
+<div class="getvisiblenotifications"><div class="getvisiblenotifications-page"><p>Returns all visible notifications as array</p>
+</div><h5 id="methods_getvisiblenotifications_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="getvisiblenotifications-page"><p>array with notifications as objects</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismaxlengthreached">isMaxLengthReached()</h3>
+<div class="ismaxlengthreached"><div class="ismaxlengthreached-page"><p>Checks if max allowed amount of visible notifications are reached.</p>
+</div><h5 id="methods_ismaxlengthreached_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ismaxlengthreached-page"><p>is reached or not</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_remove">remove(notificationId)</h3>
+<div class="remove"><div class="remove-page"><p>Removes a notification from the visible notification list.
+If grouped notifications are available, it will move newest grouped notification to visible notification
+list.</p>
+</div><h5 id="methods_remove_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>notificationId</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="remove-page"><p>the id of the notification which should be removed</p>
+</div></td></tr></tbody></table><h5 id="methods_remove_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-void">void</a></td><td><div class="remove-page"><p>nothing</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

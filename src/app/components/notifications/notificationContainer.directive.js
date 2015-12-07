@@ -1,9 +1,19 @@
 /**
- * @name
- * @author Matthias Komarek matthias@m-komarek.de
- * @copyright Matthias Komarek 2015
- * @date 07.12.15 00:14
+ * @ngdoc directive
+ * @name mk.notifications.directives.NotificationContainer:notificationContainer
+ * @restrict 'AE'
+ * @element ANY
+ * @scope
+ * @requires mk.notifications.directives.Notification:notification
+ * @description
+ *
+ * An angular directive to create a container for all notifications on the top right corner of the screen.
+ * Fetches all grouped and visible notifications and displays them on the screen.
+ *
+ * @example
+ * <div notification-container></div>
  */
+
 (function () {
 	'use strict';
 
@@ -40,6 +50,7 @@
 	/* @ngInject */
 	function NotificationContainerDirectiveController(NotificationCenter) {
 		var vm = this;
+		// fetch all notifications from NotificationCenter
 		vm.groupedNotifications = NotificationCenter.getGroupedNotifications();
 		vm.visibleNotifications = NotificationCenter.getVisibleNotifications();
 	}

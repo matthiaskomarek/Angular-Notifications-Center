@@ -1,10 +1,9 @@
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('myApp', [
-	    'ngAnimate',
-	    'mk.notifications'
-    ]);
-
+	angular
+		.module('myApp', [
+			'ngAnimate',
+			'mk.notifications'
+		]);
 })();
