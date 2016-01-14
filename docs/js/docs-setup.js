@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "mk.notifications",
       "shortDescription": "mk.notifications",
-      "keywords": "amount api button close corner dismissable dismissed display front group grouped max messages mk module newest notification notifications older overview reached satisfied screen service stacked top user visible"
+      "keywords": "amount api button close corner dismissable dismissed display front group grouped include max messages mk module newest nganimate notification notifications older optional overview reached satisfied screen service stacked top transitions user visible"
     },
     {
       "section": "api",

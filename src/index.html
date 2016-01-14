@@ -25,34 +25,27 @@
 
 		<div class="container" ng-controller="MainController as main">
 
-			<div class="row">
-				<div class="small-12 columns">
-					<h3>Notifications Example Page</h3>
-				</div>
-				<div class="medium-4 columns">
-					<label>Title
-						<input type="text" placeholder="Notification Title" ng-model="main.newNotification.header" />
-					</label>
-				</div>
-				<div class="medium-4 columns">
-					<label>Type
-						<select ng-model="main.newNotification.category">
-							<option value="info">Info</option>
-							<option value="warning">Warning</option>
-							<option value="error">Error</option>
-						</select>
-					</label>
-				</div>
-				<div class="medium-8 columns left">
-					<label>Body
-						<textarea ng-model="main.newNotification.content" placeholder="Notification Body"></textarea>
-					</label>
-				</div>
-				<div class="small-12 columns">
-					<button class="button" ng-click="main.createNotification()">Create</button>
-				</div>
-
-			</div>
+			<h3>Notifications Example Page</h3>
+			<label>Title
+				<input type="text" placeholder="Notification Title" ng-model="main.newNotification.header" />
+			</label>
+			<br>
+			<br>
+			<label>Category
+				<select ng-model="main.newNotification.category">
+					<option value="info">Info</option>
+					<option value="warning">Warning</option>
+					<option value="error">Error</option>
+				</select>
+			</label>
+			<br>
+			<br>
+			<label>Body
+				<textarea ng-model="main.newNotification.content" placeholder="Notification Body"></textarea>
+			</label>
+			<br>
+			<br>
+			<button class="button" ng-click="main.createNotification()">Create</button>
 		</div>
 		<div notification-container></div>
 

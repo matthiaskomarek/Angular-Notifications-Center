@@ -5,3 +5,5 @@ coverage/
 .idea/
 .tmp/
 dist/
+notification_bundle/
+notification_bundle.zip

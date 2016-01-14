@@ -10,6 +10,7 @@
  * Notifications get stacked up until the max amount is reached (Default: 5). The service will group older notifications
  * into a group so that the max amount is satisfied again.
  * If a visible notification gets dismissed, the newest grouped notification gets visible again.
+ * The ngAnimate module is optional, if you include it you will get some transitions for new notifications.
  */
 
 (function() {
